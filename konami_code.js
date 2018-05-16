@@ -16,14 +16,14 @@ const codeWhich = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 function init() {
   let index = 0;
   document.body.addEventListener('keydown', function(e) {
-    debugger;
-    const key = parseInt(e.detail||e.which);
-    if (key === codeWhich[index]) {
-      console.log(`did ${codeWhich[index]}`);
+   // debugger;
+    const key = e.key;
+    if (key === codes[index]) {
+      console.log(`did ${codes[index]}`);
       index++;
-      if (index === codeWhich.length) {
+      if (index === codes.length) {
         console.log(`should be congrats`);
-        debugger;
+       // debugger;
         window.alert('Congratulations!');
         console.log('aftercongrats');
         index = 0;
